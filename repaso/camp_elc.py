@@ -42,7 +42,6 @@ def vote(nombres):
     j = 0
     for i in range(0,len(nombres)):
         print("Estimado", nombres[i][0] , nombres[i][1], "vote por mí.")
- 
 
 def main():
     usuarios = (
@@ -62,7 +61,6 @@ def saludos(nombres,p,n):
     for i in range(0,len(sub_tupla)):
         print("Estimado", nombres[i][0] , nombres[i][1], "vote por mí.")
 
-
 def main():
     usuarios = (
     ("Julieta", "Femenino"),
@@ -75,16 +73,15 @@ def main():
     saludos(usuarios,p,n)
 
 
+
 def saludos(nombres, p, n):
-    # El slicing está perfecto
+    
     sub_tupla = nombres[p : p + n]
 
-    # Opción A: Usando directamente los elementos (más Pythonico)
     for persona in sub_tupla:
         nombre = persona[0]
         genero = persona[1]
         
-        # Un tip: Podés usar un if para el género
         prefijo = "Estimada" if genero == "Femenino" else "Estimado"
         
         print(f"{prefijo} {nombre}, vote por mí.")
@@ -93,10 +90,9 @@ def main():
     usuarios = (
         ("Julieta", "Femenino"),
         ("Marcos", "Masculino"),
-        ("Alex", "No binario"),
+        ("BOCHA", "No binario wtf"),
         ("Sofía", "Femenino")
     )
-    # Si p=1 y n=2, debería saludar a Marcos y Alex
-    saludos(usuarios, 1, 2)
+    saludos(usuarios, 1, 10)
 
 main()
